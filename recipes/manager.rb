@@ -28,6 +28,11 @@ remote_file 'hdfs-mesos' do
   path "#{Chef::Config[:file_cache_path]}/#{hdfs_mesos_filename}"
 end
 
+directory 'hdfs-mesos-parent' do
+  path hdfs_mesos_path
+  action :create
+end
+
 execute 'untar-hdfs-mesos' do
   cwd Chef::Config[:file_cache_path]
   command "tar xzf ./#{hdfs_mesos_filename} -C #{hdfs_mesos_path} --strip 1"
