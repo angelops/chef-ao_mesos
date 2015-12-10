@@ -19,10 +19,17 @@
 
 include_recipe 'mesos::master'
 
-hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos_version]
+hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos][:version]
+hdfs_mesos_filename = "hdfs-mesos-#{hdfs_mesos_version}"
+hdfs_mesos_path = node[:zip_mesos][:hdfs_mesos][:path]
 
 remote_file 'hdfs-mesos' do
   source 'https://github.com/mesosphere/hdfs/archive/#{hdfs_mesos_version}.tar.gz'
-  path "#{Chef::Config[:file_cache_path]}/hdfs-mesos#{hdfs_mesos_version}.tar.gz"
+  path "#{Chef::Config[:file_cache_path]}/#{hdfs_mesos_filename}.tar.gz"
 end
 
+execute 'untar-hdfs-mesos' do
+  cwd Chef::Config[:file_cache_path]
+  command "tar xzf ./#{hdfs_mesos_filename} -C #{hdfs_mesos_path} --strip 1"
+  creates "#{hdfs_mesos_path}/"
+end
