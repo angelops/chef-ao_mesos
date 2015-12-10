@@ -19,3 +19,10 @@
 
 include_recipe 'mesos::master'
 
+hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos_version]
+
+remote_file 'hdfs-mesos' do
+  source 'https://github.com/mesosphere/hdfs/archive/#{hdfs_mesos_version}.tar.gz'
+  path "#{Chef::Config[:file_cache_path]}/hdfs-mesos#{hdfs_mesos_version}.tar.gz"
+end
+

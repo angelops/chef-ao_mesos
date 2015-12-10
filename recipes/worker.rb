@@ -17,6 +17,5 @@
 # limitations under the License.
 #
 
-include_recipe 'docker'
 include_recipe 'mesos::slave'
 

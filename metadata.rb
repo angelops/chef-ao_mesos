@@ -4,7 +4,6 @@ maintainer_email 'juryan@ziprealty.com'
 license          'Apache 2.0'
 description      'Installs/Configures zip_mesos'
 long_description 'Installs/Configures zip_mesos'
-version          '0.1.2'
+version          '0.1.3'
 
-depends 'docker'
 depends 'mesos'
