@@ -36,5 +36,5 @@ end
 execute 'untar-hdfs-mesos' do
   cwd Chef::Config[:file_cache_path]
   command "tar xzf ./#{hdfs_mesos_filename} -C #{hdfs_mesos_path} --strip 1"
-  creates "#{hdfs_mesos_path}/"
+  creates "#{hdfs_mesos_path}/bin/hdfs-mesos"
 end
