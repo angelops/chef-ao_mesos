@@ -24,7 +24,7 @@ hdfs_mesos_filename = "hdfs-mesos-#{hdfs_mesos_version}"
 hdfs_mesos_path = node[:zip_mesos][:hdfs_mesos][:path]
 
 remote_file 'hdfs-mesos' do
-  source 'https://github.com/mesosphere/hdfs/archive/#{hdfs_mesos_version}.tar.gz'
+  source "https://github.com/mesosphere/hdfs/archive/#{hdfs_mesos_version}.tar.gz"
   path "#{Chef::Config[:file_cache_path]}/#{hdfs_mesos_filename}.tar.gz"
 end
 
