@@ -38,3 +38,9 @@ execute 'untar-hdfs-mesos' do
   command "tar xzf ./#{hdfs_mesos_filename} -C #{hdfs_mesos_path} --strip 1"
   creates "#{hdfs_mesos_path}/bin/hdfs-mesos"
 end
+
+execute 'build-hdfs-mesos' do
+  cwd hdfs_mesos_path
+  command "bin/build-hdfs"
+  creates "#{hdfs_mesos_path}/build"
+end
