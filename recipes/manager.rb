@@ -25,6 +25,10 @@ docker_service 'default' do
   action [:create, :start]
 end
 
+docker_image 'zipjustizin/kafka-mesos' do
+  action :pull
+end
+
 hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos][:version]
 hdfs_mesos_filename = "hdfs-mesos-#{hdfs_mesos_version}.tar.gz"
 hdfs_mesos_path = node[:zip_mesos][:hdfs_mesos][:path]
