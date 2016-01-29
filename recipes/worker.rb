@@ -19,3 +19,11 @@
 
 include_recipe 'mesos::slave'
 
+docker_service 'default' do
+  action [:create, :start]
+end
+
+docker_image 'zipjustizin/kafka-mesos' do
+  action :pull
+end
+
