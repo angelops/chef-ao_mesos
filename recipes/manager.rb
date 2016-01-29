@@ -18,6 +18,7 @@
 #
 
 include_recipe 'mesos::master'
+include_recipe 'marathon'
 
 hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos][:version]
 hdfs_mesos_filename = "hdfs-mesos-#{hdfs_mesos_version}.tar.gz"
@@ -45,5 +46,5 @@ execute 'build-hdfs-mesos' do
   creates "#{hdfs_mesos_path}/build"
 end
 
-package 'marathon'
+
 
