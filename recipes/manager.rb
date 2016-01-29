@@ -44,3 +44,6 @@ execute 'build-hdfs-mesos' do
   command "bin/build-hdfs"
   creates "#{hdfs_mesos_path}/build"
 end
+
+package 'marathon'
+
