@@ -19,4 +19,5 @@
 
 include_recipe 'mesos::slave'
 include_recipe 'zip_mesos::docker'
+include_recipe 'marathon::install'
 
