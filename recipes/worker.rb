@@ -22,4 +22,5 @@ include_recipe 'zip_mesos::docker'
 include_recipe 'marathon::install'
 include_recipe 'hadoop::flume'
 include_recipe 'apache_kafka::install'
+include_recipe 'hadoop::hive'
 
