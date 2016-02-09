@@ -22,6 +22,8 @@ include_recipe 'marathon::install'
 include_recipe 'marathon::service'
 include_recipe 'zip_mesos::docker'
 
+include_recipe 'hadoop::hive'
+
 hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos][:version]
 hdfs_mesos_filename = "hdfs-mesos-#{hdfs_mesos_version}.tar.gz"
 hdfs_mesos_path = node[:zip_mesos][:hdfs_mesos][:path]
