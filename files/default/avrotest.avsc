@@ -1,0 +1,11 @@
+{
+     "type": "record",
+     "namespace": "com.ziprealty",
+     "name": "AvroTest",
+     "fields": [
+       { "name": "timestamp", "type": "string" },
+       { "name": "genid", "type": "int" },
+       { "name": "count", "type": "int" },
+       { "name": "message", "type": "string" }
+     ]
+}
