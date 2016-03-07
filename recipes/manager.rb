@@ -21,7 +21,7 @@ include_recipe 'mesos::master'
 include_recipe 'marathon::install'
 include_recipe 'marathon::service'
 include_recipe 'chronos'
-include_recipe 'zip_mesos::docker'
+#include_recipe 'zip_mesos::docker'
 
 hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos][:version]
 hdfs_mesos_filename = "hdfs-mesos-#{hdfs_mesos_version}.tar.gz"
