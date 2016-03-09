@@ -17,8 +17,9 @@
 # limitations under the License.
 #
 
+include_recipe 'zip_mesos::default'
 include_recipe 'mesos::slave'
-include_recipe 'zip_mesos::docker'
+#include_recipe 'zip_mesos::docker'
 include_recipe 'marathon::install'
 include_recipe 'hadoop::flume'
 include_recipe 'apache_kafka::install'
