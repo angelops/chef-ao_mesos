@@ -19,8 +19,8 @@
 
 include_recipe 'zip_mesos::default'
 include_recipe 'mesos::master'
-#include_recipe 'marathon::install'
-#include_recipe 'marathon::service'
+include_recipe 'marathon::install'
+include_recipe 'marathon::service'
 #include_recipe 'chronos'
 #include_recipe 'zip_mesos::docker'
 
