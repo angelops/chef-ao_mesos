@@ -17,6 +17,10 @@
 # limitations under the License.
 #
 
+directory node['mesos']['master']['flags']['work_dir'] do
+  action :create
+end
+
 include_recipe 'zip_mesos::default'
 include_recipe 'mesos::slave'
 #include_recipe 'zip_mesos::docker'
