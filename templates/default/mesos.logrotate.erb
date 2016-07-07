@@ -1,0 +1,9 @@
+<%= @logrotate_path > {
+	daily
+	missingok
+	rotate <%= @days >
+	compress
+	delaycompress
+	notifempty
+  copytruncate
+}

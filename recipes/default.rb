@@ -19,3 +19,11 @@
 
 include_recipe 'mesos'
 
+template node[:zip_mesos][:logrotate_config_filename] do
+  source node[:zip_mesos][:logrotate_config_template_filename]
+  action :create
+  variables({
+    :logrotate_path => node[:zip_mesos][:logrotate_path],
+    :logrotate_days => node[:zip_mesos][:logrotate_days]
+  })
+end
