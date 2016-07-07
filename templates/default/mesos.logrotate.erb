@@ -1,7 +1,7 @@
-<%= @logrotate_path > {
+<%= @logrotate_path %> {
 	daily
 	missingok
-	rotate <%= @days >
+	rotate <%= @logrotate_days %>
 	compress
 	delaycompress
 	notifempty
