@@ -7,9 +7,19 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
+  - name: centos-6.6
   - name: centos-7.1
 
 suites:
   - name: default
     run_list:
+      - recipe[zip_mesos]
+    attributes:
+  - name: manager
+    run_list:
+      - recipe[zip_mesos::manager]
+    attributes:
+  - name: worker
+    run_list:
+      - recipe[zip_mesos::worker]
     attributes:
