@@ -1,9 +1,9 @@
-name             'zip_mesos'
+name             'ao_mesos'
 maintainer       'Justin Alan Ryan (ZipRealty / Realogy)'
 maintainer_email 'juryan@ziprealty.com'
 license          'Apache 2.0'
-description      'Installs/Configures zip_mesos'
-long_description 'Installs/Configures zip_mesos'
+description      'Installs/Configures ao_mesos'
+long_description 'Installs/Configures ao_mesos'
 version          '0.4.8'
 
 depends 'mesos', '~> 3.5.1'

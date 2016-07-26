@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zip_mesos
+# Cookbook Name:: ao_mesos
 # Recipe:: default
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)

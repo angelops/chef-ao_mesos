@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zip_mesos
+# Cookbook Name:: ao_mesos
 # Recipe:: default
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)
@@ -21,9 +21,9 @@ directory node['mesos']['master']['flags']['work_dir'] do
   action :create
 end
 
-include_recipe 'zip_mesos::default'
+include_recipe 'ao_mesos::default'
 include_recipe 'mesos::slave'
-#include_recipe 'zip_mesos::docker'
+#include_recipe 'ao_mesos::docker'
 include_recipe 'marathon::install'
 include_recipe 'hadoop::flume'
 include_recipe 'apache_kafka::install'

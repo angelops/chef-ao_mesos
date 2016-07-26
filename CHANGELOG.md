@@ -1,3 +1,3 @@
 # 0.1.0
 
-Initial release of zip_mesos
+Initial release of ao_mesos

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zip_mesos
+# Cookbook Name:: ao_mesos
 # Recipe:: default
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)
@@ -19,11 +19,11 @@
 
 include_recipe 'mesos'
 
-template node[:zip_mesos][:logrotate_config_filename] do
-  source node[:zip_mesos][:logrotate_config_template_filename]
+template node[:ao_mesos][:logrotate_config_filename] do
+  source node[:ao_mesos][:logrotate_config_template_filename]
   action :create
   variables({
-    :logrotate_path => node[:zip_mesos][:logrotate_path],
-    :logrotate_days => node[:zip_mesos][:logrotate_days]
+    :logrotate_path => node[:ao_mesos][:logrotate_path],
+    :logrotate_days => node[:ao_mesos][:logrotate_days]
   })
 end

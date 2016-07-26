@@ -1,4 +1,4 @@
-# zip_mesos-cookbook
+# ao_mesos-cookbook
 
 TODO: Enter the cookbook description here.
 
@@ -16,7 +16,7 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['zip_mesos']['bacon']</tt></td>
+    <td><tt>['ao_mesos']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -25,14 +25,14 @@ TODO: List your supported platforms.
 
 ## Usage
 
-### zip_mesos::default
+### ao_mesos::default
 
-Include `zip_mesos` in your node's `run_list`:
+Include `ao_mesos` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[zip_mesos::default]"
+    "recipe[ao_mesos::default]"
   ]
 }
 ```

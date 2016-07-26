@@ -13,13 +13,13 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[zip_mesos]
+      - recipe[ao_mesos]
     attributes:
   - name: manager
     run_list:
-      - recipe[zip_mesos::manager]
+      - recipe[ao_mesos::manager]
     attributes:
   - name: worker
     run_list:
-      - recipe[zip_mesos::worker]
+      - recipe[ao_mesos::worker]
     attributes:

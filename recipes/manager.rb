@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: zip_mesos
+# Cookbook Name:: ao_mesos
 # Recipe:: default
 #
 # Copyright (C) 2015 Justin Alan Ryan (ZipRealty / Realogy)
@@ -17,16 +17,16 @@
 # limitations under the License.
 #
 
-include_recipe 'zip_mesos::default'
+include_recipe 'ao_mesos::default'
 include_recipe 'mesos::master'
 include_recipe 'marathon::install'
 include_recipe 'marathon::service'
 #include_recipe 'chronos'
-#include_recipe 'zip_mesos::docker'
+#include_recipe 'ao_mesos::docker'
 
-hdfs_mesos_version = node[:zip_mesos][:hdfs_mesos][:version]
+hdfs_mesos_version = node[:ao_mesos][:hdfs_mesos][:version]
 hdfs_mesos_filename = "hdfs-mesos-#{hdfs_mesos_version}.tar.gz"
-hdfs_mesos_path = node[:zip_mesos][:hdfs_mesos][:path]
+hdfs_mesos_path = node[:ao_mesos][:hdfs_mesos][:path]
 
 #remote_file 'hdfs-mesos' do
 #  source "https://github.com/mesosphere/hdfs/archive/#{hdfs_mesos_version}.tar.gz"
